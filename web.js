@@ -7,9 +7,9 @@ var app = express.createServer(express.logger());
 //  response.send('Hello World2!');
 //});
 
-fs.readFile('/index.html', function (err, data) {
+fs.readFile('./index.html', function (err, html) {
   if (err) throw err;
-  console.log(data);
+  response.write(html);
 });
 
 var port = process.env.PORT || 5000;
