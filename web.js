@@ -3,10 +3,6 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 
-//app.get('/', function(request, response) {
-//  response.send('Hello World2!');
-//});
-
 fs.readFile('./index.html', function (err, html) {
   if (err) throw err;
   response.write(html);
